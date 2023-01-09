@@ -219,21 +219,21 @@ section.no-parallax {
 
 .bg-parallax-1::after {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("/assets/bg-img-1.jpeg");
+    url("assets/bg-img-1.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .bg-parallax-2::after {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("/assets/bg-img-2.jpeg");
+    url("assets/bg-img-2.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .bg-parallax-3::after {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("/assets/bg-img-3.jpeg");
+    url("assets/bg-img-3.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
 }
