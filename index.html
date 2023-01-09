@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>3D Kontur Konstruktion</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Nunito+Sans:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <!-- main wrapper needed for parallax effect to work -->
+      <header class="sticky-top header-main">
+        <div class="container navbar-container">
+          <nav class="navbar navbar-expand-lg navbar-primary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <!-- <img src="assets/logo-main.svg" alt="logo" /> -->
+                <svg
+                  width="202"
+                  height="55"
+                  viewBox="0 0 202 55"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    class="logo-brand-text"
+                    d="M70.7332 49C70.5443 49 70.2999 48.7778 69.9999 48.3333C69.711 47.8778 69.2943 47.1667 68.7499 46.2C68.6832 46.0778 68.4943 45.7501 68.1832 45.2167C67.8832 44.6723 67.5999 44.2056 67.3332 43.8167C67.0777 43.4279 66.8499 43.1223 66.6499 42.9001L64.9666 44.8001V48.0167L66.4832 48.1833V49H61.8V48.1833L63.1833 48.0167V37.6502L61.8167 37.4502V36.6169H66.3499V37.4502L64.9666 37.6502V43.4834L69.8665 37.6502L68.4665 37.4502V36.6169H72.5832V37.4502L71.2998 37.6502L67.6999 41.6834C68.0888 42.0168 68.4999 42.5001 68.9332 43.1334C69.3776 43.7667 69.9165 44.5834 70.5499 45.5834C71.0943 46.4389 71.4887 47.05 71.7332 47.4167C71.9887 47.7722 72.1887 47.9667 72.3332 48L73.1165 48.1833V49H70.7332ZM78.9095 49.1833C77.7762 49.1833 76.8151 48.9222 76.0262 48.4C75.2484 47.8778 74.6596 47.1445 74.2596 46.2C73.8596 45.2445 73.6596 44.139 73.6596 42.8834C73.6596 41.6057 73.8985 40.4835 74.3762 39.5168C74.8651 38.5502 75.5318 37.8057 76.3762 37.2835C77.2206 36.7502 78.1706 36.4835 79.2261 36.4835C80.9595 36.4835 82.2817 37.0335 83.1928 38.1335C84.115 39.2224 84.5761 40.7335 84.5761 42.6668C84.5761 43.9667 84.3261 45.1112 83.8261 46.1C83.3372 47.0778 82.6594 47.8389 81.7928 48.3833C80.9372 48.9167 79.9761 49.1833 78.9095 49.1833ZM79.1261 37.3502C78.0484 37.3502 77.1984 37.8224 76.5762 38.7668C75.954 39.7001 75.6429 41.0723 75.6429 42.8834C75.6429 44.5501 75.9429 45.8723 76.5429 46.85C77.154 47.8167 78.0039 48.3 79.0928 48.3C80.1595 48.3 81.0039 47.8167 81.6261 46.85C82.2594 45.8834 82.5761 44.4945 82.5761 42.6834C82.5761 41.0057 82.2761 39.7001 81.6761 38.7668C81.0761 37.8224 80.2261 37.3502 79.1261 37.3502ZM87.2873 37.6502L85.954 37.4502V36.6169H89.054L94.6039 44.7501L95.5372 46.5167V37.6502L94.0872 37.4502V36.6169H98.0205V37.4502L96.6872 37.6502V49H95.3706L89.704 40.6835L88.4207 38.4835V48.0167L90.004 48.1833V49H85.954V48.1833L87.2873 48V37.6502ZM103.268 49.1833C102.69 49.1833 102.173 49.1333 101.718 49.0333C101.262 48.9333 100.762 48.8 100.218 48.6333C99.8843 48.5111 99.6343 48.4445 99.4676 48.4333L99.601 45.4167H100.668L100.951 47.5834C101.14 47.7611 101.445 47.9222 101.868 48.0667C102.301 48.2 102.773 48.2667 103.284 48.2667C104.129 48.2667 104.768 48.0778 105.201 47.7C105.645 47.3222 105.868 46.8 105.868 46.1334C105.868 45.7001 105.745 45.3278 105.501 45.0167C105.268 44.7056 104.951 44.439 104.551 44.2167C104.162 43.9945 103.623 43.7334 102.934 43.4334C102.312 43.1556 101.768 42.8723 101.301 42.5834C100.845 42.2945 100.445 41.9112 100.101 41.4335C99.7676 40.9446 99.601 40.3612 99.601 39.6835C99.601 39.0724 99.7621 38.5279 100.084 38.0502C100.418 37.5613 100.89 37.178 101.501 36.9002C102.123 36.6224 102.845 36.4835 103.668 36.4835C104.179 36.4835 104.629 36.5224 105.018 36.6002C105.418 36.678 105.868 36.7835 106.368 36.9169C106.59 36.9946 106.779 37.0446 106.934 37.0669L106.834 39.8668H105.818L105.484 37.8168C105.373 37.7057 105.14 37.6002 104.784 37.5002C104.44 37.4002 104.062 37.3502 103.651 37.3502C102.884 37.3502 102.301 37.5113 101.901 37.8335C101.512 38.1557 101.318 38.6224 101.318 39.2335C101.318 39.6779 101.434 40.0501 101.668 40.3501C101.912 40.6501 102.212 40.9057 102.568 41.1168C102.923 41.3279 103.49 41.6168 104.268 41.9834C104.99 42.3279 105.579 42.639 106.034 42.9168C106.49 43.1945 106.879 43.5612 107.201 44.0167C107.534 44.4612 107.701 44.9945 107.701 45.6167C107.701 46.2056 107.534 46.7723 107.201 47.3167C106.879 47.8611 106.379 48.3111 105.701 48.6667C105.034 49.0111 104.223 49.1833 103.268 49.1833ZM113.163 37.5002L110.297 37.6002L109.713 41.0835H108.613L108.897 36.6169H119.28L119.48 41.0835H118.43L117.88 37.6002L114.997 37.5002V48.0167L117.363 48.1833V49H110.997V48.1833L113.163 48.0167V37.5002ZM120.636 48.1833L122.019 48.0167V37.6502L120.72 37.4335V36.6169H122.903C123.214 36.6169 123.636 36.5946 124.169 36.5502C124.725 36.5058 125.158 36.4835 125.469 36.4835C127.103 36.4835 128.264 36.7502 128.953 37.2835C129.653 37.8057 130.003 38.6335 130.003 39.7668C130.003 40.5557 129.78 41.2779 129.336 41.9334C128.903 42.589 128.303 43.0334 127.536 43.2668C127.892 43.4556 128.219 43.7834 128.519 44.2501C128.83 44.7056 129.208 45.3445 129.653 46.1667C129.997 46.7889 130.258 47.2445 130.436 47.5334C130.625 47.8222 130.803 47.9833 130.969 48.0167L131.619 48.1833V49H129.319C129.142 49 128.942 48.8111 128.719 48.4333C128.497 48.0445 128.203 47.45 127.836 46.65C127.436 45.7723 127.086 45.0778 126.786 44.5667C126.497 44.0445 126.208 43.7112 125.919 43.5668C124.731 43.5668 124.025 43.5612 123.803 43.5501V48.0167L125.453 48.1833V49H120.636V48.1833ZM125.786 42.6668C126.497 42.6668 127.058 42.4334 127.469 41.9668C127.881 41.5001 128.086 40.8057 128.086 39.8835C128.086 39.0724 127.875 38.4557 127.453 38.0335C127.042 37.6002 126.325 37.3835 125.303 37.3835C124.947 37.3835 124.592 37.4057 124.236 37.4502C124.014 37.4724 123.869 37.4835 123.803 37.4835V42.6501C123.969 42.6612 124.314 42.6668 124.836 42.6668H125.786ZM137.954 49.1333C136.321 49.1333 135.115 48.7 134.338 47.8334C133.571 46.9556 133.188 45.6001 133.188 43.7667V37.6502L132.004 37.4502V36.6169H136.454V37.4502L135.038 37.6668V43.9501C135.038 45.4612 135.304 46.55 135.838 47.2167C136.382 47.8834 137.16 48.2167 138.171 48.2167C139.182 48.2167 139.938 47.8611 140.438 47.15C140.949 46.4389 141.204 45.4056 141.204 44.0501V37.6668L139.804 37.4502V36.6169H143.687V37.4502L142.471 37.6502V43.9667C142.471 45.7001 142.06 46.9945 141.238 47.85C140.415 48.7056 139.321 49.1333 137.954 49.1333ZM153.675 49C153.486 49 153.241 48.7778 152.941 48.3333C152.652 47.8778 152.236 47.1667 151.691 46.2C151.625 46.0778 151.436 45.7501 151.125 45.2167C150.825 44.6723 150.541 44.2056 150.275 43.8167C150.019 43.4279 149.791 43.1223 149.591 42.9001L147.908 44.8001V48.0167L149.425 48.1833V49H144.741V48.1833L146.125 48.0167V37.6502L144.758 37.4502V36.6169H149.291V37.4502L147.908 37.6502V43.4834L152.808 37.6502L151.408 37.4502V36.6169H155.525V37.4502L154.241 37.6502L150.641 41.6834C151.03 42.0168 151.441 42.5001 151.875 43.1334C152.319 43.7667 152.858 44.5834 153.491 45.5834C154.036 46.4389 154.43 47.05 154.675 47.4167C154.93 47.7722 155.13 47.9667 155.275 48L156.058 48.1833V49H153.675ZM160.868 37.5002L158.001 37.6002L157.418 41.0835H156.318L156.601 36.6169H166.984L167.184 41.0835H166.134L165.584 37.6002L162.701 37.5002V48.0167L165.068 48.1833V49H158.701V48.1833L160.868 48.0167V37.5002ZM170.024 37.6502L168.474 37.4502V36.6169H173.374V37.4502L171.824 37.6502V48.0167L173.374 48.2V49H168.49V48.1833L170.024 48.0167V37.6502ZM180.112 49.1833C178.979 49.1833 178.018 48.9222 177.229 48.4C176.451 47.8778 175.862 47.1445 175.462 46.2C175.062 45.2445 174.862 44.139 174.862 42.8834C174.862 41.6057 175.101 40.4835 175.579 39.5168C176.068 38.5502 176.735 37.8057 177.579 37.2835C178.423 36.7502 179.373 36.4835 180.429 36.4835C182.162 36.4835 183.484 37.0335 184.396 38.1335C185.318 39.2224 185.779 40.7335 185.779 42.6668C185.779 43.9667 185.529 45.1112 185.029 46.1C184.54 47.0778 183.862 47.8389 182.996 48.3833C182.14 48.9167 181.179 49.1833 180.112 49.1833ZM180.329 37.3502C179.251 37.3502 178.401 37.8224 177.779 38.7668C177.157 39.7001 176.846 41.0723 176.846 42.8834C176.846 44.5501 177.146 45.8723 177.746 46.85C178.357 47.8167 179.207 48.3 180.296 48.3C181.362 48.3 182.207 47.8167 182.829 46.85C183.462 45.8834 183.779 44.4945 183.779 42.6834C183.779 41.0057 183.479 39.7001 182.879 38.7668C182.279 37.8224 181.429 37.3502 180.329 37.3502ZM188.49 37.6502L187.157 37.4502V36.6169H190.257L195.807 44.7501L196.74 46.5167V37.6502L195.29 37.4502V36.6169H199.223V37.4502L197.89 37.6502V49H196.573L190.907 40.6835L189.623 38.4835V48.0167L191.207 48.1833V49H187.157V48.1833L188.49 48V37.6502Z"
+                  />
+                  <path
+                    d="M5.23492 35.9561C4.63605 35.9561 3.97523 35.9045 3.25246 35.8013C2.55034 35.7187 1.97213 35.6154 1.51782 35.4915V33.1993C2.38514 33.4677 3.31441 33.602 4.30564 33.602C5.75118 33.602 7.00054 33.3645 8.05372 32.8895C9.12754 32.4146 9.94324 31.7744 10.5008 30.969C11.0584 30.1637 11.3372 29.2757 11.3372 28.3051C11.3372 26.9835 10.9448 25.9613 10.1601 25.2385C9.37535 24.5157 8.20859 24.1337 6.6598 24.0924L4.80125 24.557L4.15076 22.6675C4.99743 22.5229 5.83378 22.2648 6.6598 21.8931C7.85753 21.3562 8.78681 20.685 9.44763 19.8797C10.1084 19.0537 10.4389 18.176 10.4389 17.2467C10.4389 16.2142 10.1188 15.4605 9.4786 14.9855C8.85909 14.5105 8.06404 14.2731 7.09346 14.2731C6.18484 14.2731 5.32784 14.4279 4.52247 14.7377C3.73775 15.0474 3.06661 15.4295 2.50904 15.8838L1.42489 13.9943C2.02375 13.4161 2.99433 12.8482 4.33662 12.2906C5.69955 11.733 7.08314 11.4543 8.48738 11.4543C10.4492 11.4543 12.0393 11.8776 13.2577 12.7243C14.4967 13.5503 15.1162 14.81 15.1162 16.5033C15.1162 17.9902 14.538 19.3015 13.3816 20.4372C12.2251 21.573 10.8106 22.4403 9.13787 23.0392C9.34437 23.0186 9.65413 23.0082 10.0671 23.0082C11.905 23.0082 13.3919 23.4729 14.5277 24.4021C15.6841 25.3314 16.2623 26.5705 16.2623 28.1192C16.283 29.6061 15.839 30.938 14.9303 32.1151C14.0424 33.3129 12.762 34.2525 11.0893 34.9339C9.41665 35.6154 7.46517 35.9561 5.23492 35.9561Z"
+                    fill="#2CCF4E"
+                  />
+                  <path
+                    d="M21.2 10.3081L18.8769 9.90546V7.98496H23.3993C24.0808 7.98496 24.9998 7.94366 26.1562 7.86106C26.4246 7.84041 26.8273 7.81976 27.3642 7.79911C27.9218 7.77845 28.4174 7.76813 28.8511 7.76813C32.6508 7.76813 35.4902 8.71805 37.3694 10.6179C39.2693 12.5178 40.2192 15.2127 40.2192 18.7026C40.2192 21.1394 39.7442 23.3077 38.7943 25.2075C37.865 27.1074 36.5331 28.5942 34.7984 29.668C33.0638 30.7212 31.04 31.2478 28.7272 31.2478C28.1283 31.2478 27.1887 31.2065 25.9084 31.1239C24.7106 31.0413 23.8949 31 23.4613 31H18.753V29.1415L21.2 28.8317V10.3081ZM25.6915 28.9246C26.3937 29.1105 27.3746 29.2034 28.6342 29.2034C30.6993 29.1621 32.3204 28.3361 33.4975 26.7253C34.6745 25.0939 35.2631 22.6572 35.2631 19.415C35.2631 16.3381 34.6849 13.9633 33.5284 12.2906C32.372 10.5973 30.5754 9.75058 28.1386 9.75058C27.6224 9.75058 27.1268 9.78156 26.6518 9.84351C26.1975 9.90546 25.8774 9.94676 25.6915 9.96741V28.9246Z"
+                    fill="#ED3035"
+                  />
+                  <path
+                    class="logo-brand-text"
+                    d="M57.186 22.5436H44.5788V19.6319H57.186V22.5436ZM78.3071 31C77.9974 31 77.5947 30.6076 77.0991 29.8229C76.6035 29.0175 75.9117 27.7475 75.0237 26.0129C74.2596 24.5261 73.6195 23.3283 73.1032 22.4197C72.5869 21.5111 72.0913 20.7573 71.6164 20.1585L68.8595 23.318V28.8317L71.5234 29.1724V31H61.8899V29.1415L64.337 28.8317V10.3081L61.9209 9.90546V7.98496H71.2446V9.90546L68.8595 10.3081V20.4063L77.0061 10.3081L74.4661 9.90546V7.98496H82.8296V9.90546L80.2586 10.3081L74.2493 17.0609C74.9721 17.7217 75.7361 18.6613 76.5415 19.8797C77.3469 21.0774 78.3278 22.6469 79.4842 24.588C80.3309 26.0129 80.9711 27.0557 81.4047 27.7166C81.8384 28.3567 82.1688 28.7284 82.3959 28.8317L83.8518 29.1724V31H78.3071ZM94.7582 31.3407C91.3922 31.3407 88.8728 30.2876 87.2001 28.1812C85.5274 26.0748 84.6911 23.2044 84.6911 19.5699C84.6911 17.1951 85.1247 15.1094 85.992 13.3128C86.88 11.5162 88.119 10.1326 89.7091 9.16204C91.2992 8.19147 93.1268 7.70618 95.1919 7.70618C98.5992 7.70618 101.15 8.71805 102.843 10.7418C104.557 12.7449 105.414 15.5534 105.414 19.1672C105.414 21.5627 104.96 23.6897 104.051 25.5483C103.163 27.3862 101.914 28.811 100.303 29.8229C98.6921 30.8348 96.8439 31.3407 94.7582 31.3407ZM95.068 9.5957C93.3746 9.5957 92.053 10.4321 91.1031 12.1047C90.1531 13.7774 89.6782 16.2555 89.6782 19.5389C89.6782 22.7811 90.1325 25.2488 91.0411 26.9422C91.9704 28.6149 93.292 29.4512 95.006 29.4512C96.6787 29.4512 97.99 28.5736 98.9399 26.8183C99.8899 25.0423 100.365 22.492 100.365 19.1672C100.365 15.9457 99.9105 13.5503 99.0019 11.9808C98.0933 10.3907 96.782 9.5957 95.068 9.5957ZM109.984 10.3081L107.537 9.90546V7.98496H114.568L123.799 21.9241L125.534 25.4553V10.3081L122.87 9.90546V7.98496H130.552V9.90546L128.167 10.3081V31H124.419L114.785 16.3484L112.617 12.2596V28.8317L115.746 29.1415V31H107.537V29.1415L109.984 28.8317V10.3081ZM139.898 10.0294L135.469 10.1842L134.261 16.937H131.659L132.185 7.98496H152.165L152.537 16.937H150.089L148.881 10.1842L144.514 10.0294V28.8317L148.85 29.1415V31H135.934V29.1415L139.898 28.8317V10.0294ZM165.141 31.2478C162.002 31.2478 159.669 30.4631 158.141 28.8936C156.612 27.3242 155.848 24.8565 155.848 21.4904V10.3081L153.804 9.90546V7.98496H163.159V9.90546L160.526 10.3391V21.8931C160.526 26.8079 162.271 29.2654 165.761 29.2654C167.475 29.2654 168.745 28.6355 169.571 27.3758C170.397 26.0955 170.81 24.3092 170.81 22.017V10.3391L168.146 9.90546V7.98496H175.89V9.90546L173.783 10.3081V21.7692C173.783 24.9907 172.999 27.3758 171.429 28.9246C169.88 30.4734 167.784 31.2478 165.141 31.2478ZM177.444 29.1415L179.891 28.8317V10.3081L177.567 9.87449V7.98496H182.059C182.451 7.98496 182.885 7.97463 183.36 7.95398C183.835 7.93333 184.196 7.91268 184.444 7.89203C185.518 7.80943 186.406 7.76813 187.108 7.76813C189.235 7.76813 190.939 7.98496 192.219 8.41862C193.499 8.85228 194.429 9.5131 195.007 10.4011C195.585 11.289 195.874 12.4558 195.874 13.9013C195.874 15.3262 195.492 16.6479 194.728 17.8662C193.964 19.0846 192.859 19.921 191.414 20.3753C192.24 20.7264 192.973 21.3665 193.613 22.2958C194.253 23.2251 194.935 24.4331 195.657 25.92C196.174 26.9318 196.566 27.6649 196.834 28.1192C197.124 28.5529 197.402 28.8007 197.671 28.8627L198.693 29.1724V31H193.427C193.097 31 192.746 30.6696 192.374 30.0088C192.023 29.3273 191.558 28.2638 190.98 26.8183C190.299 25.1249 189.71 23.8033 189.214 22.8534C188.719 21.9034 188.192 21.3149 187.635 21.0877H184.444V28.8317L187.294 29.1415V31H177.444V29.1415ZM187.294 19.1982C188.471 19.1982 189.39 18.7749 190.051 17.9282C190.712 17.0815 191.042 15.8115 191.042 14.1182C191.042 12.6107 190.712 11.4956 190.051 10.7728C189.411 10.05 188.295 9.68863 186.705 9.68863C186.127 9.68863 185.632 9.71961 185.218 9.78156C184.826 9.82286 184.568 9.84351 184.444 9.84351V19.1363C184.692 19.1776 185.291 19.1982 186.241 19.1982H187.294Z"
+                  />
+                </svg>
+              </a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul
+                  class="navbar-nav ms-auto mb-2 mb-lg-0 navbar-links fw-bold"
+                >
+                  <li class="nav-item">
+                    <a class="nav-link text-uppercase" href="#">Leistungen</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-uppercase" href="#">Produkte</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-uppercase" href="#">Kontaktdaten</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-uppercase" href="#">Shop</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      EN
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">DE</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item theme-toggler">
+                    <a class="nav-link text-uppercase" href="#">
+                      <i class="bi bi-sun theme-icon"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <section class="hero no-parallax">
+        <div class="container">
+          <div class="even-columns">
+            <div class="hero-text-container">
+              <h1 class="mb-4">HERZLICH WILLKOMMEN</h1>
+              <p class="mb-3">
+                Unser Sondermaschinenbau Unternehmer bietet umfassende
+                Dienstleistungen und Konstruktive -Lösungen für kleine und
+                mittelständische Betriebe. Mit über zwei Jahrzehnten Erfahrung
+                in der Sondermaschinenbau-Beratung verfügen wir über die nötige
+                Expertise, um auch Ihrem Unternehmen zur richtigen Technologie
+                zu realisieren.
+              </p>
+              <p class="mb-3">
+                Vertrauen Sie auf unserer exzellenten Kundenbetreuung: Wir
+                stellen kein unterschied ob Sie Privat oder Fortgeschrittene
+                Unternehmer, bei uns wird mit Verständnis gleich betreut werden.
+                Dafür wir stehen gerade für unseren Handwerk und Qualität mit
+                zufriedenen Kunden.
+              </p>
+            </div>
+            <div class="hero-img-container">
+              <img class="hero-img" src="assets/web_devices.svg" alt="hero-image" />
+            </div>
+          </div>
+
+          <!-- bootstrap version  -->
+          <!-- <div class="row align-items-center">
+            <div class="col-12 col-lg-6">
+              <h1 class="mb-4">HERZLICH WILLKOMMEN</h1>
+              <p class="mb-3">
+                Unser Sondermaschinenbau Unternehmer bietet umfassende Dienstleistungen und Konstruktive -Lösungen für kleine und mittelständische Betriebe. Mit über zwei Jahrzehnten Erfahrung in der Sondermaschinenbau-Beratung verfügen wir über die nötige Expertise, um auch Ihrem Unternehmen zur richtigen Technologie zu realisieren.
+              </p>
+              <p class="mb-3">
+                Vertrauen Sie auf unserer exzellenten Kundenbetreuung: Wir stellen kein unterschied ob Sie Privat oder Fortgeschrittene Unternehmer, bei uns wird mit Verständnis gleich betreut werden. Dafür wir stehen gerade für unseren Handwerk und Qualität mit zufriedenen Kunden.
+              </p>
+            </div>
+            <div class="col-12 col-lg-6">
+              <img src="assets/cables.jpeg" alt="" class="rounded-circle">
+            </div>
+          </div> -->
+          <!-- bootstrap version  -->
+        </div>
+      </section>
+
+      <section class="parallax bg-parallax-1">
+        <h2 class="d-none d-md-block">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+          fringilla justo non risus accumsan sodales. Cras enim lacus, efficitur
+          in justo ut, laoreet iaculis sapien. Ut aliquam lacinia luctus.
+        </h2>
+      </section>
+
+      <section class="no-parallax">
+        <div class="container cards-container">
+          <div class="row row-cols-1 row-cols-md-3 justify-content-center g-5">
+            <div class="col single-card-container">
+              <div class="card h-100 border-0 text-center">
+                <div class="card-icon-container">
+                  <img
+                    src="/assets/arrow-sync.svg"
+                    class="card-img-top card-icon"
+                    alt="arrow-sync"
+                  />
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">
+                    This is a longer card with supporting text below as a
+                    natural lead-in to additional content. This content is a
+                    little bit longer.
+                    <br />
+                    <a href=""><small>Mehr erfahren...</small></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col single-card-container">
+              <div class="card h-100 border-0 text-center">
+                <div class="card-icon-container">
+                  <img
+                    src="/assets/arrow-sync.svg"
+                    class="card-img-top card-icon"
+                    alt="arrow-sync"
+                  />
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">
+                    This is a longer card with supporting text below as a
+                    natural lead-in to additional content. This content is a
+                    little bit longer.
+                    <br />
+                    <a href=""><small>Mehr erfahren...</small></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col single-card-container">
+              <div class="card h-100 border-0 text-center">
+                <div class="card-icon-container">
+                  <img
+                    src="/assets/arrow-sync.svg"
+                    class="card-img-top card-icon"
+                    alt="arrow-sync"
+                  />
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">
+                    This is a longer card with supporting text below as a
+                    natural lead-in to additional content. This content is a
+                    little bit longer.
+                    <br />
+                    <a href=""><small>Mehr erfahren...</small></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col single-card-container">
+              <div class="card h-100 border-0 text-center">
+                <div class="card-icon-container">
+                  <img
+                    src="/assets/arrow-sync.svg"
+                    class="card-img-top card-icon"
+                    alt="arrow-sync"
+                  />
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">
+                    This is a longer card with supporting text below as a
+                    natural lead-in to additional content. This content is a
+                    little bit longer.
+                    <br />
+                    <a href=""><small>Mehr erfahren...</small></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col single-card-container">
+              <div class="card h-100 border-0 text-center">
+                <div class="card-icon-container">
+                  <img
+                    src="/assets/arrow-sync.svg"
+                    class="card-img-top card-icon"
+                    alt="arrow-sync"
+                  />
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">
+                    This is a longer card with supporting text below as a
+                    natural lead-in to additional content. This content is a
+                    little bit longer.
+                    <br />
+                    <a href=""><small>Mehr erfahren...</small></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col single-card-container">
+              <div class="card h-100 border-0 text-center">
+                <div class="card-icon-container">
+                  <img
+                    src="/assets/arrow-sync.svg"
+                    class="card-img-top card-icon"
+                    alt="arrow-sync"
+                  />
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">
+                    This is a longer card with supporting text below as a
+                    natural lead-in to additional content. This content is a
+                    little bit longer.
+                    <br />
+                    <a href=""><small>Mehr erfahren...</small></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="parallax bg-parallax-2">
+        <h2 class="d-none d-md-block">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+          fringilla justo non risus accumsan sodales. Cras enim lacus, efficitur
+          in justo ut, laoreet iaculis sapien. Ut aliquam lacinia luctus.
+        </h2>
+      </section>
+
+      <section class="no-parallax">
+        <div class="container">
+          <div class="even-columns">
+            <div class="hero-img-container">
+              <img class="hero-img" src="assets/business_deal.svg" alt="hero-image" />
+            </div>
+            <div class="hero-text-container">
+              <h2 class="mb-4">Product/Dienstleistungsname</h2>
+              <p class="mb-3">
+                Unser Sondermaschinenbau Unternehmer bietet umfassende
+                Dienstleistungen und Konstruktive -Lösungen für kleine und
+                mittelständische Betriebe. Mit über zwei Jahrzehnten Erfahrung
+                in der Sondermaschinenbau-Beratung verfügen wir über die nötige
+                Expertise, um auch Ihrem Unternehmen zur richtigen Technologie
+                zu realisieren.
+              </p>
+              <p class="mb-3">
+                Vertrauen Sie auf unserer exzellenten Kundenbetreuung: Wir
+                stellen kein unterschied ob Sie Privat oder Fortgeschrittene
+                Unternehmer, bei uns wird mit Verständnis gleich betreut werden.
+                Dafür wir stehen gerade für unseren Handwerk und Qualität mit
+                zufriedenen Kunden.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="parallax bg-parallax-3">
+        <h2 class="d-none d-md-block">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+          fringilla justo non risus accumsan sodales. Cras enim lacus, efficitur
+          in justo ut, laoreet iaculis sapien. Ut aliquam lacinia luctus.
+        </h2>
+      </section>
+
+      <footer class="primary-footer">
+        <div class="container">
+          <div class="primary-footer-wrapper">
+            <div class="company-info">
+              <h5>Unternehmen</h5>
+              <ul>
+                <li><a href="">Unternehmen</a></li>
+                <li><a href="">Kontakt</a></li>
+                <li><a href="">Impressum</a></li>
+                <li><a href="">Standorte</a></li>
+              </ul>
+            </div>
+
+            <div class="contact-info">
+              <h5>Produkte</h5>
+              <ul>
+                <li><a href="">Maschinen</a></li>
+                <li><a href="">Prozessmodule</a></li>
+                <li><a href="">Schweißtechnik</a></li>
+                <li><a href="">Werkzeiuglösüngen</a></li>
+                <li><a href="">Steurungstechnik</a></li>
+              </ul>
+            </div>
+
+            <div class="contact-form">
+              <h5>Kontakt Formular</h5>
+              <form>
+                <div class="personal-data">
+                  <!-- <label for="company">Firma:</label> -->
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    placeholder="Firma"
+                  />
+                  <!-- <label for="fname">Vorname:</label> -->
+                  <input
+                    type="text"
+                    id="fname"
+                    name="fname"
+                    placeholder="Vorname"
+                  />
+                  <!-- <label for="lname">Nachname:</label> -->
+                  <input
+                    type="text"
+                    id="lname"
+                    name="lname"
+                    placeholder="Nachname"
+                  />
+                  <!-- <label for="email">Email:</label> -->
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Email"
+                  />
+                  <!-- <label for="city">Ort:</label> -->
+                  <input type="text" id="city" name="city" placeholder="Ort" />
+                  <!-- <label for="country">Land:</label> -->
+                  <input
+                    type="text"
+                    id="country"
+                    name="country"
+                    placeholder="Land"
+                  />
+                </div>
+                <div class="personal-message">
+                  <!-- <label for="message">Nachricht:</label> -->
+                  <textarea
+                    name="message"
+                    id="message"
+                    placeholder="Nachricht"
+                  ></textarea>
+                </div>
+
+                <!-- <div class="row">
+                  <div class="col-12 col-md-6">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="First name"
+                      aria-label="First name"
+                    />
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Last name"
+                      aria-label="Last name"
+                    />
+                  </div>
+                </div> -->
+              </form>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <!-- custom script  -->
+    <script src="main.js"></script>
+    <!-- custom script  -->
+  </body>
+</html>
