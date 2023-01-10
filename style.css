@@ -253,6 +253,9 @@ section.no-parallax {
 /* header  */
 .header-main {
   background-color: var(--clr-background-primary);
+}
+
+.nav-scrolled {
   box-shadow: 0 -0.5rem 2rem var(--clr-text-heading);
 }
 
@@ -348,6 +351,7 @@ footer.primary-footer {
   min-height: fit-content;
   position: relative;
   padding-block: 4rem;
+  z-index: 999;
 }
 
 /* footer .primary-footer-wrapper {
